@@ -7,6 +7,5 @@ The data file necessary to generate the catalog is included in this repository a
 download it yourself (for example, if the database is updated), here are instructions to do so:
 - Go to the ATNF pulsar database and select "Name", "JName", "RaJD", "DecJD", "P0", "Dist".
 - Set the "Output style" to "Long csv with errors", then click on "TABLE".
-- Copy the output, remove the second line (`;;;;;(deg);;(deg);;(s);;;(kpc);`), and save as *atnf_pulsars.csv*.
-  - This can be done in a text editor by replacing semicolons with commas, or in Excel through "Data" -> "Text to Columns",
-    and then saving the file with the appropriate extension.
+- Copy the output, remove the second line (`;;;;;(deg);;(deg);;(s);;;(kpc);`), replace semicolons with commas, and save as *atnf_pulsars.csv*.
+  - This can be done in a text editor by replacing semicolons with commas, or in Excel through "Data" -> "Text to Columns", and then saving the file with the appropriate extension.

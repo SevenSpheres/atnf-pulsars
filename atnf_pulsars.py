@@ -17,13 +17,20 @@ distances = {
 'J1412+7922' : [2, 'https://arxiv.org/abs/1902.00144'],
 'J1849-0001' : [7, 'https://arxiv.org/abs/1902.00144'],
 }
+planethosts = ['B1257+12', 'B1620-26', 'J1719-1438', 'B0329+54', 'B0943+10',
+               'J0636+5129', 'J1311-3430', 'J1807-2459A', 'J2241-5236', 'J2322-2650']
+coords = []
 datafile = open('atnf_pulsars.csv', 'r')
 stcfile = open('atnf_pulsars.stc', 'w')
 sscfile = open('pulsar_jets.ssc', 'w')
 script = open('mark_pulsars_period.cel', 'w')
-stcfile.write("""# Catalog of 3177 pulsars for Celestia from the ATNF database, v1.65.
+stcfile.write("""# Catalog of 3282 pulsars for Celestia from the ATNF database, v1.66.
 # Source: http://www.atnf.csiro.au/research/pulsar/psrcat/
-# Manchester, R. N., Hobbs, G. B., Teoh, A. & Hobbs, M., AJ, 129, 1993-2006 (2005)\n\n""")
+# Manchester, R. N., Hobbs, G. B., Teoh, A. & Hobbs, M., AJ, 129, 1993-2006 (2005)
+#
+# 10 pulsars with planets or substellar companions are included in extrasolar.stc,
+# so they have been commented out in this file. Pulsars with the same coordinates as
+# previously defined pulsars have also been commented out.\n\n""")
 script.write("""{\n""")
 rows = csv.DictReader(datafile)
 for row in rows:
@@ -47,16 +54,29 @@ for row in rows:
         period = ''
     else:
         period = eval(row['P0'])
-    stcfile.write('"%s"\n' % namelist)
-    stcfile.write('{\n')
-    stcfile.write('\tRA %s\n' % ra)
-    stcfile.write('\tDec %s\n' % dec)
-    stcfile.write('\tDistance %s\n' % dist)
-    stcfile.write('\tSpectralType "Q"\n')
-    stcfile.write('\tAbsMag 25\n')
-    if period:
-        stcfile.write('\tRotationPeriod %s\n' % (period/3600))
-    stcfile.write('}\n\n')
+    if row['NAME'] in planethosts or [ra, dec, dist] in coords:
+        stcfile.write('# "%s"\n' % namelist)
+        stcfile.write('# {\n')
+        stcfile.write('#\tRA %s\n' % ra)
+        stcfile.write('#\tDec %s\n' % dec)
+        stcfile.write('#\tDistance %s\n' % dist)
+        stcfile.write('#\tSpectralType "Q"\n')
+        stcfile.write('#\tAbsMag 25\n')
+        if period:
+            stcfile.write('#\tRotationPeriod %s\n' % (period/3600))
+        stcfile.write('# }\n\n')
+    else:
+        stcfile.write('"%s"\n' % namelist)
+        stcfile.write('{\n')
+        stcfile.write('\tRA %s\n' % ra)
+        stcfile.write('\tDec %s\n' % dec)
+        stcfile.write('\tDistance %s\n' % dist)
+        stcfile.write('\tSpectralType "Q"\n')
+        stcfile.write('\tAbsMag 25\n')
+        if period:
+            stcfile.write('\tRotationPeriod %s\n' % (period/3600))
+        stcfile.write('}\n\n')
+        coords.append([ra, dec, dist])
     sscfile.write('"" "PSR %s" {\n' % row['NAME'])
     sscfile.write('\tClass "diffuse"\n')
     sscfile.write('\tMesh "jets_sprites1.cmod"\n')
