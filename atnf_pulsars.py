@@ -7,7 +7,9 @@ names = {
 'J1023+0038' : 'AY Sex',
 'B1257+12'   : 'Lich',
 'J1412+7922' : 'Calvera',
+'B1509-58'   : 'Circinus Pulsar',
 'J1808-2024' : 'SGR 1806-20',
+'J1809-1943' : 'V5634 Sgr', # http://vizier.u-strasbg.fr/viz-bin/VizieR-S?V*%20V5634%20Sgr
 'B1913+16'   : 'Hulse-Taylor Pulsar',
 'B1957+20'   : 'Black Widow:QX Sge',
 'J2051-0827' : 'LY Aqr',
@@ -24,7 +26,7 @@ datafile = open('atnf_pulsars.csv', 'r')
 stcfile = open('atnf_pulsars.stc', 'w')
 sscfile = open('pulsar_jets.ssc', 'w')
 script = open('mark_pulsars_period.cel', 'w')
-stcfile.write("""# Catalog of 3282 pulsars for Celestia from the ATNF database, v1.66.
+stcfile.write("""# Catalog of 3320 pulsars for Celestia from the ATNF database, v1.67.
 # Source: http://www.atnf.csiro.au/research/pulsar/psrcat/
 # Manchester, R. N., Hobbs, G. B., Teoh, A. & Hobbs, M., AJ, 129, 1993-2006 (2005)
 #
