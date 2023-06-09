@@ -3,6 +3,7 @@ names = {
 'J0146+6145' : '4U 0142+61',
 'B0531+21'   : 'Crab Pulsar:CM Tau:SN 1054',
 'J0633+1746' : 'Geminga:SN 437',
+'B0656+14'   : 'Monogem Pulsar',
 'B0833-45'   : 'Vela Pulsar:HU Vel',
 'J1023+0038' : 'AY Sex',
 'B1257+12'   : 'Lich',
@@ -10,6 +11,7 @@ names = {
 'B1509-58'   : 'Circinus Pulsar',
 'J1808-2024' : 'SGR 1806-20',
 'J1809-1943' : 'V5634 Sgr', # http://vizier.u-strasbg.fr/viz-bin/VizieR-S?V*%20V5634%20Sgr
+'J1856-3754' : 'RX J1856.5-3754',
 'B1913+16'   : 'Hulse-Taylor Pulsar',
 'B1957+20'   : 'Black Widow:QX Sge',
 'J2051-0827' : 'LY Aqr',
