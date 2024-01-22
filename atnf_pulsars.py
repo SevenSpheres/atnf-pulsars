@@ -28,7 +28,7 @@ datafile = open('atnf_pulsars.csv', 'r')
 stcfile = open('atnf_pulsars.stc', 'w')
 sscfile = open('pulsar_jets.ssc', 'w')
 script = open('mark_pulsars_period.cel', 'w')
-stcfile.write("""# Catalog of 3389 pulsars for Celestia from the ATNF database, v1.70.
+stcfile.write("""# Catalog of 3473 pulsars for Celestia from the ATNF database, v1.71.
 # Source: http://www.atnf.csiro.au/research/pulsar/psrcat/
 # Manchester, R. N., Hobbs, G. B., Teoh, A. & Hobbs, M., AJ, 129, 1993-2006 (2005)
 #
