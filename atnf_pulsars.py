@@ -18,21 +18,24 @@ names = {
 'B2224+65'   : 'Guitar Pulsar', # https://arxiv.org/abs/0910.4453
 }
 distances = {
-'J1412+7922' : [2, 'https://arxiv.org/abs/1902.00144'],
-'J1849-0001' : [7, 'https://arxiv.org/abs/1902.00144'],
+'J1412+7922' : [2, 'Bogdanov et al., 2019ApJ...877...69B'],
+'J1849-0001' : [7, 'Bogdanov et al., 2019ApJ...877...69B'],
 }
-planethosts = ['B1257+12', 'B1620-26', 'J1719-1438', 'B0329+54', 'B0943+10',
-               'J0636+5129', 'J1311-3430', 'J1807-2459A', 'J2241-5236', 'J2322-2650']
+planethosts = ['B1257+12', 'B1620-26', 'J1719-1438', 'B0329+54', 'B0943+10', 'J0312-0921',
+               'J1311-3430', 'J1807-2459A', 'J1928+1245', 'J2241-5236', 'J2322-2650']
 coords = []
 datafile = open('atnf_pulsars.csv', 'r')
 stcfile = open('atnf_pulsars.stc', 'w')
 sscfile = open('pulsar_jets.ssc', 'w')
 script = open('mark_pulsars_period.cel', 'w')
-stcfile.write("""# Catalog of 3473 pulsars for Celestia from the ATNF database, v1.71.
-# Source: http://www.atnf.csiro.au/research/pulsar/psrcat/
+stcfile.write("""# SPDX-FileCopyrightText: 2021-2024 SevenSpheres
+# SPDX-License-Identifier: CC-BY-4.0
+#
+# Catalog of 3630 pulsars for Celestia from the ATNF database, v2.2.0.
+# Source: https://www.atnf.csiro.au/research/pulsar/psrcat/
 # Manchester, R. N., Hobbs, G. B., Teoh, A. & Hobbs, M., AJ, 129, 1993-2006 (2005)
 #
-# 10 pulsars with planets or substellar companions are included in extrasolar.stc,
+# 11 pulsars with planets or substellar companions are included in extrasolar.stc,
 # so they have been commented out in this file. Pulsars with the same coordinates as
 # previously defined pulsars have also been commented out.\n\n""")
 script.write("""{\n""")
