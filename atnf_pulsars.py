@@ -32,7 +32,7 @@ script = open('mark_pulsars_period.cel', 'w')
 stcfile.write("""# SPDX-FileCopyrightText: 2021-2024 SevenSpheres
 # SPDX-License-Identifier: CC-BY-4.0
 #
-# Catalog of 3630 pulsars for Celestia from the ATNF database, v2.2.0.
+# Catalog of 3724 pulsars for Celestia from the ATNF database, v2.4.0.
 # Source: https://www.atnf.csiro.au/research/pulsar/psrcat/
 # Manchester, R. N., Hobbs, G. B., Teoh, A. & Hobbs, M., AJ, 129, 1993-2006 (2005)
 #
