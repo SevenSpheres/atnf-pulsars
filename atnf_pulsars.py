@@ -14,25 +14,26 @@ names = {
 'J1809-1943'  : 'V5634 Sgr', # http://vizier.u-strasbg.fr/viz-bin/VizieR-S?V*%20V5634%20Sgr
 'J1856-3754'  : 'RX J1856.5-3754',
 'B1913+16'    : 'Hulse-Taylor Pulsar',
+'J1935+2154'  : 'SGR 1935+2154',
 'B1957+20'    : 'Black Widow:QX Sge',
 'J2051-0827'  : 'LY Aqr',
-'B2224+65'    : 'Guitar Pulsar', # https://arxiv.org/abs/0910.4453
+'B2224+65'    : 'Guitar Pulsar',
 }
 distances = {
 'J1412+7922' : [2, 'Bogdanov et al., 2019ApJ...877...69B'],
 'J1849-0001' : [7, 'Bogdanov et al., 2019ApJ...877...69B'],
 }
-planethosts = ['B1257+12', 'B1620-26', 'J1719-1438', 'B0329+54', 'B0943+10', 'J0312-0921',
-               'J1311-3430', 'J1807-2459A', 'J1928+1245', 'J2241-5236', 'J2322-2650']
+planethosts = ['B0943+10', 'B1257+12', 'B1620-26', 'J0312-0921', 'J1311-3430', 'J1701-3006H',
+               'J1719-1438', 'J1807-2459A', 'J1928+1245', 'J2241-5236', 'J2322-2650']
 coords = []
 datafile = open('atnf_pulsars.csv', 'r')
 stcfile = open('atnf_pulsars.stc', 'w')
 sscfile = open('pulsar_jets.ssc', 'w')
 script = open('mark_pulsars_period.cel', 'w')
-stcfile.write("""# SPDX-FileCopyrightText: 2021-2024 SevenSpheres
+stcfile.write("""# SPDX-FileCopyrightText: 2021-2025 SevenSpheres
 # SPDX-License-Identifier: CC-BY-4.0
 #
-# Catalog of 3724 pulsars for Celestia from the ATNF database, v2.4.0.
+# Catalog of 3748 pulsars for Celestia from the ATNF database, v2.5.1.
 # Source: https://www.atnf.csiro.au/research/pulsar/psrcat/
 # Manchester, R. N., Hobbs, G. B., Teoh, A. & Hobbs, M., AJ, 129, 1993-2006 (2005)
 #
