@@ -24,7 +24,7 @@ distances = {
 'J1849-0001' : [7, 'Bogdanov et al., 2019ApJ...877...69B'],
 'J1935+2154' : [6.6, 'Zhou et al., 2020ApJ...905...99Z'],
 }
-planethosts = ['B0943+10', 'B1257+12', 'B1620-26', 'J0312-0921', 'J1311-3430', 'J1701-3006H',
+planethosts = ['B1257+12', 'B1620-26', 'J0312-0921', 'J1311-3430', 'J1701-3006H',
                'J1719-1438', 'J1807-2459A', 'J1928+1245', 'J2241-5236', 'J2322-2650']
 coords = []
 datafile = open('atnf_pulsars.csv', 'r')
@@ -34,7 +34,7 @@ script = open('mark_pulsars_period.cel', 'w')
 stcfile.write("""# SPDX-FileCopyrightText: 2021-2025 SevenSpheres
 # SPDX-License-Identifier: CC-BY-4.0
 #
-# Catalog of 3839 pulsars for Celestia from the ATNF database, v2.6.0.
+# Catalog of 4343 pulsars for Celestia from the ATNF database, v2.6.3.
 # Source: https://www.atnf.csiro.au/research/pulsar/psrcat/
 # Manchester, R. N., Hobbs, G. B., Teoh, A. & Hobbs, M., AJ, 129, 1993-2006 (2005)
 #
