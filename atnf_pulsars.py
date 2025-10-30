@@ -34,11 +34,11 @@ script = open('mark_pulsars_period.cel', 'w')
 stcfile.write("""# SPDX-FileCopyrightText: 2021-2025 SevenSpheres
 # SPDX-License-Identifier: CC-BY-4.0
 #
-# Catalog of 4343 pulsars for Celestia from the ATNF database, v2.6.3.
+# Catalog of 4303 pulsars for Celestia from the ATNF database, v2.6.5.
 # Source: https://www.atnf.csiro.au/research/pulsar/psrcat/
 # Manchester, R. N., Hobbs, G. B., Teoh, A. & Hobbs, M., AJ, 129, 1993-2006 (2005)
 #
-# 11 pulsars with planets or substellar companions are included in extrasolar.stc,
+# 10 pulsars with planets or substellar companions are included in extrasolar.stc,
 # so they have been commented out in this file. Pulsars with the same coordinates as
 # previously defined pulsars have also been commented out.\n\n""")
 script.write("""{\n""")
